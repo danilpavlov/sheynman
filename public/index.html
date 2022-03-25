@@ -1,0 +1,171 @@
+<!doctype>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Stand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="css_test.css">
+
+</head>
+
+<body>
+<h1><img src="img/logo.png"
+         width="100"
+         alt="leti_tag"
+         id="tag">
+    Проверка теоремы Гюйгенса-Штейнера методом вращательных колебаний
+
+    <button class = "info_button" onclick="alert('Данное приложение было разработано Владимиром Басыровым, факультет ФКТИ, под руководством доцента' +
+         ' кафедры физики к. ф.-м. н. Ильи Львовича Шейнмана. ' +
+          'Санкт-Петербургский Государственный Электротехнический Университет СПбГЭТУ.')">О приложении</button>
+    <img src = "img/logokaf.png" id = "department">
+</h1>
+
+<div class="container">
+    <h2 class="screen">
+        <span id="minutes">
+          00
+        </span>:<span id="seconds">
+          00
+        </span>:<span id="hundredths">
+          00
+        </span>
+    </h2>
+
+    <div class="const_tab">
+        <p><span>m = 200±2 [г] </span>
+            <span>d = 138±2 [мм] </span>
+        </p>
+        <p>
+            <span>R = 16±2 [мм] </span>
+        </p>
+
+    </div>
+</div>
+
+<!--                 width="630"-->
+<!--                 height="255"-->
+<figure class="img">
+    <img src="img/podst_2.png"
+         class="podst">
+
+
+
+
+    <div class="spring">
+        <img src="img/PrP_2.png"
+             id="right_spring"
+             height="376">
+        <img src="img/prL_2.png"
+             id="left_spring">
+    </div>
+    <img src="img/wooden_bg.jpg"
+         id="secret">
+    <img src="img/trans_2.png"
+         id="trans"
+         width="400"
+         height="150"
+         class="inner"
+         alt="trans">
+
+    <div class="move">
+        <div class="disk">
+            <img src="img/disk_21.png"
+                 width="700"
+                 height="352"
+                 id="wheel"
+                 alt="wheel">
+        </div>
+        <div class="positions">
+            <div class="1"
+                 id="positionL4"
+                 alt="test1"
+                 r="20">
+            </div>
+            <div class="2"
+                 id="positionL3"
+                 alt="test2"
+                 r="15">
+            </div>
+            <div class="3"
+                 id="positionL2"
+                 alt="test3"
+                 r="10">
+            </div>
+            <div class="4"
+                 id="positionL1"
+                 alt="test4"
+                 r="5">
+            </div>
+            <div class="5"
+                 id="position0"
+                 alt="test5"
+                 r="0">
+            </div>
+            <div class="6"
+                 id="positionR1"
+                 alt="test6"
+                 r="5">
+            </div>
+            <div class="7"
+                 id="positionR2"
+                 alt="test7"
+                 r="10">
+            </div>
+            <div class="8"
+                 id="positionR3"
+                 alt="test8"
+                 r="15">
+            </div>
+            <div class="9"
+                 id="positionR4"
+                 alt="test9"
+                 r="20">
+            </div>
+        </div>
+    </div>
+    <div id="def_pos">
+        <img src="img/weight_2.png"
+             id="weight1"
+             draggable="true"
+             height="50"
+             width="50">
+        <img src="img/weight_2.png"
+             id="weight2"
+             draggable="true"
+             height="50"
+             width="50">
+
+    </div>
+    <div class="buttons">
+        <button id="start">СТАРТ</button>
+        <button id="stop">СТОП</button>
+        <button id="reset">СБРОС</button>
+    </div>
+
+    <div class="slidecontainer">
+        <input type="range" min="-50" max="50" value="0" class="slider" id="myRange">
+    </div>
+
+    <img src = "img/shtative.png" id = "shtat">
+    <img class="line" src="img/Line_w.png">
+    <div id = "springwrope">
+
+
+        <img src = "img/springwrope.png" id = "springwropeid">
+        <div id = "pos_sh">
+
+        </div>
+
+    </div>
+
+
+</figure>
+
+
+
+<script src="scripts/timer.js"></script>
+<script src="scripts/spin_wheel_script.js"></script>
+<script src="scripts/drag_and_drop.js"></script>
+</body>
+</html>
