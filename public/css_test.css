@@ -2,7 +2,7 @@
     position: absolute;
     top: 6px;
     font-size: 10px;
-    left: 1000px;
+    left: 1350px;
 }
 body{
     margin: 0;
@@ -88,8 +88,8 @@ html {
     background-color: #061539;
 }
 .img {
-    top: 20%;
-    transform:scale(1) ;
+    top: 10%;
+    transform:scale(0.7) ;
     left: -13%;
     -moz-user-select: none;
     user-select: none;
@@ -300,7 +300,8 @@ html {
 
 #tag{
     position: absolute;
-    left: 50px;
+    left: 20px;
+    top: 100px;
 }
 
 #shtat{
@@ -314,8 +315,8 @@ html {
 
 #department{
     position: absolute;
-    top: -1px;
-    left: 2000px;
+    top: 90px;
+    left: 1300px;
 }
 #springwrope{
     position: absolute;
