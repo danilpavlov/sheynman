@@ -1,8 +1,9 @@
 .info_button{
     position: absolute;
-    top: 6px;
+    top: 0px;
     font-size: 10px;
-    left: 1350px;
+    left: 0px;
+
 }
 body{
     margin: 0;
@@ -15,7 +16,7 @@ h1{
     background-image: url("img/wooden_bg.jpg");
     color: rgba(217, 217, 217, 0.87);
     font-family: "Arial Narr", serif;
-    font-size: 55px;
+    font-size: 45px;
     padding: .5em;
 
 }
@@ -301,7 +302,8 @@ html {
 #tag{
     position: absolute;
     left: 20px;
-    top: 100px;
+    top: 78px;
+    height: 65px;
 }
 
 #shtat{
@@ -315,7 +317,8 @@ html {
 
 #department{
     position: absolute;
-    top: 90px;
+    height: 90px;
+    top: 70px;
     left: 1300px;
 }
 #springwrope{
