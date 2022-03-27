@@ -89,7 +89,7 @@ html {
 }
 .img {
     top: 20%;
-    transform:scale(1.025) ;
+    transform:scale(1) ;
     left: -13%;
     -moz-user-select: none;
     user-select: none;
