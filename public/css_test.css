@@ -302,7 +302,7 @@ html {
 #tag{
     position: absolute;
     left: 20px;
-    top: 78px;
+    top: 38px;
     height: 65px;
 }
 
@@ -318,8 +318,8 @@ html {
 #department{
     position: absolute;
     height: 90px;
-    top: 70px;
-    left: 1300px;
+    top: 30px;
+    left: 550px;
 }
 #springwrope{
     position: absolute;
