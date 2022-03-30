@@ -1,7 +1,9 @@
 .info_button{
     position: absolute;
     top: 0px;
-    font-size: 10px;
+    font-size: 20px;
+    background-color: burlywood;
+    font-family: "Arial Narr", serif;
     left: 0px;
 
 }
@@ -303,7 +305,7 @@ html {
 
 #tag{
     position: absolute;
-    left: 1220px;
+    left: 1150px;
     top: 30px;
     height: 100px;
 }
@@ -358,6 +360,7 @@ html {
 }
 
 .instruction_tab{
+    text-align: left;
     margin-top: 10px;
     background-color: #a2a2a2;
     color: darkslateblue;
@@ -365,4 +368,41 @@ html {
     border-radius: 5px;
     padding: 4px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.prog-info {
+    position: absolute;
+    font: 1.5vw Arial, Helvetica, sans-serif;
+    left: 1190px;
+    top: 0;
+    /*color: #cbbba2;*/
+    /*position: relative;*/
+    max-height: 2.25vw;
+    grid-column: -3;
+    grid-row: 2;
+}
+
+.prog-info-inf {
+    text-align: center;
+    width: 300px;
+    z-index: -1;
+    opacity: 0;
+    position: relative;
+    left: -7.5vw;
+    top: 110%;
+    background-color: white;
+    border: 0.3vw double black;
+    color: black;
+    grid-column: -3;
+    grid-row: 3;
+}
+
+.prog-info p:hover {
+    border-color: purple;
+}
+#prog-info-p:hover  ~ .prog-info-inf {
+    opacity: 1;
+    z-index: 1;
 }
