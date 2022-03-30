@@ -16,6 +16,9 @@ const position_3_L = document.getElementById("positionL3");
 const position_4_R =document.getElementById("positionR4");
 const position_4_L =document.getElementById("positionL4");
 
+
+var spring_weight_count = 0;
+
 default_position.ondragover = allowDrop;
 position_0.ondragover=allowDrop;
 position_st.ondragover = allowDrop;
@@ -81,17 +84,29 @@ function drop(event){
 
         event.target.append(document.getElementById(itemId));
     }
-    if (((position_st.id === test1.parentNode.id) || (position_st.id === test2.parentNode.id)) &&   (test1.childElementCount === 0) &&   (test2.childElementCount === 0) && b1===1){
-        console.log(position_st.id);
-        for (let i = 0; i < 275; i += 0.005) {
-            setTimeout(() =>{
-                springpenis.style.height = String(90 + i + "px");
-            },200)
+    if (position_st.childElementCount === 1 && !((test1.firstChild===test2 || test2.firstChild===test1))) {
+
+        if (((position_st.id === test1.parentNode.id) || (position_st.id === test2.parentNode.id)) && (test1.childElementCount === 0) && (test2.childElementCount === 0) && b1 === 1) {
+            console.log(position_st.childElementCount);
+            for (let i = 0; i < 275; i += 0.005) {
+                setTimeout(() => {
+                    springpenis.style.height = String(90 + i + "px");
+                }, 200)
+                //position_st.style.top = String(445 + i + "px");
+                //console.log(springpenis.style.height);
+            }
+        }
+    }else if (position_st.childElementCount === 1 && (test1.firstChild===test2 || test2.firstChild===test1)){
+        console.log(position_st.childElementCount);
+        for (let i = 0; i < 255; i += 0.005) {
+            setTimeout(() => {
+                springpenis.style.height = String(90+255 + i + "px");
+            }, 200)
             //position_st.style.top = String(445 + i + "px");
             //console.log(springpenis.style.height);
         }
     }
-    if (b1===0 && (test1.childElementCount === 0) &&   (test2.childElementCount === 0))
+    if (b1 === 0 && (test1.childElementCount === 0) && (test2.childElementCount === 0))
         springpenis.style.height = String(365 + "px");
     if (position_st.childElementCount === 0) {
         springpenis.style.height = String(90 + "px");
