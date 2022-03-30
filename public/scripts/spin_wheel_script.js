@@ -28,6 +28,7 @@ function rotateAnimation(el,speed){
         let newdate = new Date();
         t2 = newdate.getTime() / 1000 - now;
         //console.log(A);
+
         psi2 = A * Math.exp(-1 * (t2) / Tau) * Math.cos(q * Math.sqrt(2 * 14.4107 * 256 * 0.000001 / (0.00375 + 0.2 * Math.pow(weight_radius_1, 2) + 0.2 * Math.pow(weight_radius_2, 2))) * t2);
         //console.log(degrees);
 
@@ -243,7 +244,7 @@ el.addEventListener("click", (e) => {  // КНОПКА СТАРТ
     switch (r1 + r2) {
 
         case "00":
-            Tau = 5.21;
+            Tau = 2.913;
             q = 7.44;
             weight_radius_1 = 0;
             weight_radius_2 = 0;
@@ -397,6 +398,74 @@ el.addEventListener("click", (e) => {  // КНОПКА СТАРТ
             weight_radius_2 = 0.18;
             break;
 
+
+
+        case "ss":
+            Tau = 2.56;
+            q = 8.126;
+            weight_radius_1 = 0;
+            weight_radius_2 = 0;
+            break;
+        case "s0":
+            Tau = 2.56;
+            q = 8.126;
+            weight_radius_1 = 0;
+            weight_radius_2 = 0;
+            break;
+        case "s1":
+            Tau = 3.23;
+            q = 7.5;
+            weight_radius_1 = 0;
+            weight_radius_2 = 0.06;
+            break;
+        case "s2":
+            Tau = 3.789;
+            q = 7.5;
+            weight_radius_1 = 0;
+            weight_radius_2 = 0.1;
+            break;
+        case "s3":
+            Tau = 4.63;
+            q = 7.5;
+            weight_radius_1 = 0;
+            weight_radius_2 = 0.14;
+            break;
+        case "s4":
+            Tau = 5.75;
+            q = 7.5;
+            weight_radius_1 = 0;
+            weight_radius_2 = 0.18;
+            break;
+        case "0s":
+            Tau = 2.56;
+            q = 8.126;
+            weight_radius_1 = 0;
+            weight_radius_2 = 0;
+            break;
+        case "1s":
+            Tau = 3.23;
+            q = 7.5;
+            weight_radius_1 = 0.06;
+            weight_radius_2 = 0;
+            break;
+        case "2s":
+            Tau = 3.789;
+            q = 7.5;
+            weight_radius_1 = 0.1;
+            weight_radius_2 = 0;
+            break;
+        case "3s":
+            Tau = 4.63;
+            q = 7.5;
+            weight_radius_1 = 0.14;
+            weight_radius_2 = 0;
+            break;
+        case "4s":
+            Tau = 5.75;
+            q = 7.5;
+            weight_radius_1 = 0.18;
+            weight_radius_2 = 0;
+            break;
 
         default:
             flag1=0;

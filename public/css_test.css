@@ -354,6 +354,7 @@ html {
 }
 #weight1{
     cursor: grab;
+    /*-webkit-user-drag: element;*/
 }
 
 .instruction_tab{
