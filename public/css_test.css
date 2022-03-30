@@ -287,7 +287,8 @@ html {
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
+    /*background: #4CAF50; !* Green background *!*/
+    background: #ff0707;
     cursor: pointer; /* Cursor on hover */
 }
 
@@ -295,6 +296,7 @@ html {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
     background: #4CAF50; /* Green background */
+    /*background: red;*/
     cursor: pointer; /* Cursor on hover */
 }
 
