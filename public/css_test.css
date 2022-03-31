@@ -12,6 +12,8 @@ body{
     padding: 0;
     text-align: center;
     background-image:url(img/grass2.gif);
+
+    overflow: hidden;
 }
 
 h1{
