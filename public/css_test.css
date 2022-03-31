@@ -358,6 +358,10 @@ html {
     cursor: grab;
     /*-webkit-user-drag: element;*/
 }
+#weight2{
+    cursor: grab;
+    /*-webkit-user-drag: element;*/
+}
 
 .instruction_tab{
     text-align: left;
