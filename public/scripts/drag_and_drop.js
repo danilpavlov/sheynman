@@ -1,7 +1,7 @@
 const default_position = document.getElementById("def_pos"); // selectors - class of position
 const weight_1 = document.getElementById("weight1");
 const weight_2 = document.getElementById("weight2");
-var position_st = document.getElementById("pos_sh");
+var position_st = document.getElementById("pos_ss");
 const position_0 = document.getElementById("position0");
 
 const position_1_R = document.getElementById("positionR1");
@@ -71,11 +71,11 @@ function drop(event){
     let springpenis = document.getElementById("springwropeid");
     if (test1.firstChild===test2) {
         event.target.appendChild(document.getElementById("weight2"));
-        springpenis.style.height = String(90 + "px");
+        springpenis.style.height = String(110 + "px");
     }
     else if (test2.firstChild===test1){
         event.target.appendChild(document.getElementById("weight1"));
-        springpenis.style.height = String(90 + "px");
+        springpenis.style.height = String(110 + "px");
 
     }
     else{
@@ -88,9 +88,9 @@ function drop(event){
 
         if (((position_st.id === test1.parentNode.id) || (position_st.id === test2.parentNode.id)) && (test1.childElementCount === 0) && (test2.childElementCount === 0) && b1 === 1) {
             console.log(position_st.childElementCount);
-            for (let i = 0; i < 275; i += 0.005) {
+            for (let i = 0; i < 255; i += 0.005) {
                 setTimeout(() => {
-                    springpenis.style.height = String(90 + i + "px");
+                    springpenis.style.height = String(110 + i + "px");
                 }, 200)
                 //position_st.style.top = String(445 + i + "px");
                 //console.log(springpenis.style.height);
@@ -98,18 +98,18 @@ function drop(event){
         }
     }else if (position_st.childElementCount === 1 && (test1.firstChild===test2 || test2.firstChild===test1)){
         console.log(position_st.childElementCount);
-        for (let i = 0; i < 255; i += 0.005) {
+        for (let i = 0; i < 235; i += 0.005) {
             setTimeout(() => {
-                springpenis.style.height = String(90+255 + i + "px");
+                springpenis.style.height = String(110+235 + i + "px");
             }, 200)
             //position_st.style.top = String(445 + i + "px");
             //console.log(springpenis.style.height);
         }
     }
     if (b1 === 0 && (test1.childElementCount === 0) && (test2.childElementCount === 0))
-        springpenis.style.height = String(365 + "px");
+        springpenis.style.height = String(345 + "px");
     if (position_st.childElementCount === 0) {
-        springpenis.style.height = String(90 + "px");
+        springpenis.style.height = String(110 + "px");
     }
 
     //console.log(test1.firstChild);
