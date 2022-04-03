@@ -8,11 +8,11 @@
 
 }
 body{
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     text-align: center;
     background-image:url(img/grass2.gif);
-
+    margin: auto;
     overflow: hidden;
 }
 
@@ -22,12 +22,17 @@ h1{
     font-family: "Arial Narr", serif;
     font-size: 45px;
     padding: .5em;
+    height: 100px;
 
 }
 
 html {
     height: 100%;
 
+}
+.h12{
+    position: absolute;
+    left: 300px;
 }
 
 .container {
@@ -316,8 +321,8 @@ html {
     background-image: url("img/wooden_bg.jpg");
     position: absolute;
     width: 500px;
-    height: 900px;
-    top: -25px;
+    height: 800px;
+    top: -20px;
     left: 700px
 }
 
@@ -344,21 +349,16 @@ html {
     /*background-color: rgba(255, 0, 0, 0.34);*/
 }
 #springwropeid{
-    height: 90px;
+    height: 110px;
     width: 70px;
     left: 100px;
 }
 
 .line{
     position: absolute;
-    /*min-width: 70px;*/
-    /*max-width: 70px;*/
-    /*height: 695px;*/
-    /*width: 57px;*/
-    height: 868.75px;
-    width: 71.25px;
-    /*height: 600px;*/
-    left: 770px;
+    width:100px;
+    height: 600px;
+    left: 780px;
     top: 110px;
 }
 #weight1{
@@ -386,8 +386,8 @@ html {
 .prog-info {
     position: absolute;
     font: 1.5vw Arial, Helvetica, sans-serif;
-    left: 1190px;
-    top: 0;
+    left: 1210px;
+    top:1px;
     /*color: #cbbba2;*/
     /*position: relative;*/
     max-height: 2.25vw;
@@ -397,7 +397,7 @@ html {
 
 .prog-info-inf {
     text-align: center;
-    width: 300px;
+    min-width: 300px;
     z-index: -1;
     opacity: 0;
     position: relative;
