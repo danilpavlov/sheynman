@@ -102,8 +102,7 @@ function drop(event){
             setTimeout(() => {
                 springpenis.style.height = String(90+305 + i + "px");
             }, 200)
-            //position_st.style.top = String(445 + i + "px");
-            //console.log(springpenis.style.height);
+
         }
     }
     if (b1 === 0 && (test1.childElementCount === 0) && (test2.childElementCount === 0))
