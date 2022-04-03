@@ -98,9 +98,9 @@ function drop(event){
         }
     }else if (position_st.childElementCount === 1 && (test1.firstChild===test2 || test2.firstChild===test1)){
         console.log(position_st.childElementCount);
-        for (let i = 0; i < 255; i += 0.005) {
+        for (let i = 0; i < 275; i += 0.005) {
             setTimeout(() => {
-                springpenis.style.height = String(90+255 + i + "px");
+                springpenis.style.height = String(90+275 + i + "px");
             }, 200)
             //position_st.style.top = String(445 + i + "px");
             //console.log(springpenis.style.height);

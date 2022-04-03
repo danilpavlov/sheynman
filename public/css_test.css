@@ -316,8 +316,8 @@ html {
     background-image: url("img/wooden_bg.jpg");
     position: absolute;
     width: 500px;
-    height: 800px;
-    top: -20px;
+    height: 900px;
+    top: -25px;
     left: 700px
 }
 
@@ -351,8 +351,12 @@ html {
 
 .line{
     position: absolute;
-    width: 50px;
-    height: 600px;
+    /*min-width: 70px;*/
+    /*max-width: 70px;*/
+    height: 695px;
+    width: 57px;
+
+    /*height: 600px;*/
     left: 780px;
     top: 110px;
 }
