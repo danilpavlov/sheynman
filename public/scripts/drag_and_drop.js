@@ -88,7 +88,7 @@ function drop(event){
 
         if (((position_st.id === test1.parentNode.id) || (position_st.id === test2.parentNode.id)) && (test1.childElementCount === 0) && (test2.childElementCount === 0) && b1 === 1) {
             console.log(position_st.childElementCount);
-            for (let i = 0; i < 275; i += 0.005) {
+            for (let i = 0; i < 305; i += 0.005) {
                 setTimeout(() => {
                     springpenis.style.height = String(90 + i + "px");
                 }, 200)
@@ -98,16 +98,16 @@ function drop(event){
         }
     }else if (position_st.childElementCount === 1 && (test1.firstChild===test2 || test2.firstChild===test1)){
         console.log(position_st.childElementCount);
-        for (let i = 0; i < 275; i += 0.005) {
+        for (let i = 0; i < 285; i += 0.005) {
             setTimeout(() => {
-                springpenis.style.height = String(90+275 + i + "px");
+                springpenis.style.height = String(90+305 + i + "px");
             }, 200)
             //position_st.style.top = String(445 + i + "px");
             //console.log(springpenis.style.height);
         }
     }
     if (b1 === 0 && (test1.childElementCount === 0) && (test2.childElementCount === 0))
-        springpenis.style.height = String(365 + "px");
+        springpenis.style.height = String(395 + "px");
     if (position_st.childElementCount === 0) {
         springpenis.style.height = String(90 + "px");
     }

@@ -319,10 +319,11 @@ html {
 
 #shtat{
     background-image: url("img/wooden_bg.jpg");
+    border-radius: 10px;
     position: absolute;
     width: 500px;
-    height: 800px;
-    top: -20px;
+    height: 900px;
+    top: -31px;
     left: 700px
 }
 
@@ -356,10 +357,11 @@ html {
 
 .line{
     position: absolute;
-    width:100px;
-    height: 600px;
+    height: 695px;
+    width: 57px;
     left: 780px;
     top: 110px;
+    border-radius: 10px;
 }
 #weight1{
     cursor: grab;
