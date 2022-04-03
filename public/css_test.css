@@ -334,7 +334,7 @@ html {
     height: 90px;
     left: 840px;
 }
-#pos_sh{
+#pos_ss{
     position: relative;
     top: -50px;
     width: 50px;
@@ -353,11 +353,12 @@ html {
     position: absolute;
     /*min-width: 70px;*/
     /*max-width: 70px;*/
-    height: 695px;
-    width: 57px;
-
+    /*height: 695px;*/
+    /*width: 57px;*/
+    height: 868.75px;
+    width: 71.25px;
     /*height: 600px;*/
-    left: 780px;
+    left: 770px;
     top: 110px;
 }
 #weight1{

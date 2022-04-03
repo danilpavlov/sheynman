@@ -1,7 +1,7 @@
 const default_position = document.getElementById("def_pos"); // selectors - class of position
 const weight_1 = document.getElementById("weight1");
 const weight_2 = document.getElementById("weight2");
-var position_st = document.getElementById("pos_sh");
+var position_st = document.getElementById("pos_ss");
 const position_0 = document.getElementById("position0");
 
 const position_1_R = document.getElementById("positionR1");
