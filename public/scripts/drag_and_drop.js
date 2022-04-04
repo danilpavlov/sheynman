@@ -225,3 +225,5 @@ function drop_touch(event){
 
     //console.log(test1.firstChild);
 }
+
+
