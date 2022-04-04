@@ -33,9 +33,22 @@ position_4_L.ondragover=allowDrop;
 function allowDrop(event){
     event.preventDefault();
 }
+default_position.addEventListener("touchstart",allowDrop);
+position_0.addEventListener("touchstart",allowDrop);
+position_st.addEventListener("touchstart",allowDrop);
+position_1_R.addEventListener("touchstart",allowDrop);
+position_1_L.addEventListener("touchstart",allowDrop);
+position_2_R.addEventListener("touchstart",allowDrop)
+position_2_L.addEventListener("touchstart",allowDrop);
+position_3_R.addEventListener("touchstart",allowDrop);
+position_3_L.addEventListener("touchstart",allowDrop);
+position_4_R.addEventListener("touchstart",allowDrop);
+position_4_L.addEventListener("touchstart",allowDrop);
 
 weight_1.ondragstart = drag;
 weight_2.ondragstart = drag;
+weight_1.addEventListener("touchmove", drag);
+weight_2.addEventListener("touchmove", drag);
 
 function drag(event){
     event.dataTransfer.setData('id', event.target.id);
@@ -52,7 +65,17 @@ position_3_R.ondrop=drop;
 position_3_L.ondrop=drop;
 position_4_R.ondrop=drop;
 position_4_L.ondrop=drop;
-
+default_position.addEventListener("touchend",drop);
+position_0.addEventListener("touchend",drop);
+position_st.addEventListener("touchend",drop);
+position_1_R.addEventListener("touchend",drop);
+position_1_L.addEventListener("touchend",drop);
+position_2_R.addEventListener("touchend",drop);
+position_2_L.addEventListener("touchend",drop);
+position_3_R.addEventListener("touchend",drop);
+position_3_L.addEventListener("touchend",drop);
+position_4_R.addEventListener("touchend",drop);
+position_4_L.addEventListener("touchend",drop);
 
 function drop(event){
     let test1=document.getElementById('weight1');
