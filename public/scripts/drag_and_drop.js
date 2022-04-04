@@ -65,17 +65,17 @@ position_3_R.ondrop=drop;
 position_3_L.ondrop=drop;
 position_4_R.ondrop=drop;
 position_4_L.ondrop=drop;
-default_position.addEventListener("touchend",drop);
-position_0.addEventListener("touchend",drop);
-position_st.addEventListener("touchend",drop);
-position_1_R.addEventListener("touchend",drop);
-position_1_L.addEventListener("touchend",drop);
-position_2_R.addEventListener("touchend",drop);
-position_2_L.addEventListener("touchend",drop);
-position_3_R.addEventListener("touchend",drop);
-position_3_L.addEventListener("touchend",drop);
-position_4_R.addEventListener("touchend",drop);
-position_4_L.addEventListener("touchend",drop);
+default_position.addEventListener("touchmove",drop);
+position_0.addEventListener("touchmove",drop);
+position_st.addEventListener("touchmove",drop);
+position_1_R.addEventListener("touchmove",drop);
+position_1_L.addEventListener("touchmove",drop);
+position_2_R.addEventListener("touchmove",drop);
+position_2_L.addEventListener("touchmove",drop);
+position_3_R.addEventListener("touchmove",drop);
+position_3_L.addEventListener("touchmove",drop);
+position_4_R.addEventListener("touchmove",drop);
+position_4_L.addEventListener("touchmove",drop);
 
 function drop(event){
     let test1=document.getElementById('weight1');
