@@ -34,7 +34,7 @@ position_4_R.ondragover=allowDrop;
 position_4_L.ondragover=allowDrop;
 function allowDrop(event){
     event.preventDefault();
-    console.log("start")
+    console.log("start");
 }
 default_position.addEventListener("pointerup",allowDrop);
 position_0.addEventListener("pointerup",allowDrop);
@@ -57,12 +57,16 @@ function drag(event){
     event.dataTransfer.setData('id', event.target.id);
 }
 function drag1(event){
-    weight_touch='weight1'
-    b=1;
+    if (b===0)
+    {   console.log("gj")
+        weight_touch='weight1'
+    b=1;}
 }
 function drag2(event){
-    weight_touch='weight2'
-    b=1;
+    if (b===0)
+    {   console.log("rf")
+        weight_touch='weight2'
+    b=1;}
 }
 default_position.ondrop = drop;
 position_0.ondrop=drop;

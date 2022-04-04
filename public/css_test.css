@@ -318,6 +318,7 @@ html {
 }
 
 #shtat{
+    pointer-events: none;
     background-image: url("img/wooden_bg.jpg");
     border-radius: 10px;
     position: absolute;
