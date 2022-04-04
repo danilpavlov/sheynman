@@ -19,6 +19,7 @@ const position_4_R =document.getElementById("positionR4");
 const position_4_L =document.getElementById("positionL4");
 
 
+
 var spring_weight_count = 0;
 
 default_position.ondragover = allowDrop;
