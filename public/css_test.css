@@ -15,6 +15,9 @@ body{
     margin: auto;
     overflow: hidden;
 }
+.body{
+    cursor: grab;
+}
 
 h1{
     background-image: url("img/images-2.jpeg");
@@ -73,7 +76,7 @@ html {
     display: flex;
     margin: 10px -5px 0;
     position: absolute;
-    top: 73%;
+    top: 110%;
     left: 0.8%;
     width: 100%;
 }
@@ -98,13 +101,12 @@ html {
     background-color: #061539;
 }
 .img {
-    top: 10%;
+    top: 100px;
     transform:scale(0.8) ;
-    left: -13%;
     -moz-user-select: none;
     user-select: none;
-    position: fixed;
-    margin-left: 37%;
+    position: absolute;
+    left: 300px;
     background-image: url("img/wooden_bg.jpg");
     /*top: 318px;*/
     /*height: 282px;}*/
@@ -126,77 +128,88 @@ html {
 .positions {
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    top: 48.5%;
+    position: static;
+    /*top: 48.5%;*/
     /*left: 5%;*/
     /*right: -103px;*/
+    top:160px;
     left:50px;
     min-width: 10px;
     /*overflow: hidden;*/
-
+    background-color: #4CAF50;
     /*margin-right: 1000%;*/
 }
 #positionL4{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
-    margin-right: 14px;
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.34);
+    left: 50px;
+    top:160px;
     height: 50px;
     min-width: 50px;
-    margin-top: -15px;
 }
 #positionL3{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
-    margin-right:14px;
+    background-color: rgba(255, 0, 0, 0.34);
+    position: absolute;
+    left:110px;
     height: 50px;
     min-width: 50px;
-    margin-top: -15px;
+    top:160px
 }
 #positionL2{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
-    margin-right:7px;
+    background-color: rgba(255, 0, 0, 0.34);
+    left:170px;
+    position: absolute;
     height: 50px;
     min-width: 50px;
-    margin-top: -15px;
+    top: 160px;
 }
 #positionL1{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
-    margin-right:42px;
+    background-color: rgba(255, 0, 0, 0.34);
+    left:240px;
+    position: absolute;
     height: 50px;
     min-width: 50px;
-    margin-top: -15px;
+    top:160px
 }
 #position0{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
-    margin-right:40px;
+    background-color: rgba(2, 0, 0, 0.34);
+    left:330px;
+    position: absolute;
     height: 50px;
     min-width: 50px;
-    margin-top: -16px;
+    top:159px;
 }
 #positionR1{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
-    margin-right:10px;
+    background-color: rgba(255, 0, 0, 0.34);
+    left:415px;
+    position: absolute;
     height: 50px;
     min-width: 50px;
-    margin-top: -17px;
+    top: 157px;
 }
 #positionR2{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
-    margin-right:10px;
+    background-color: rgba(255, 0, 0, 0.34);
+    left:475px;
+    position: absolute;
     height: 50px;
     min-width: 50px;
-    margin-top: -17px;
+    top: 157px;
 }
 #positionR3{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
-    margin-right:10px;
+    background-color: rgba(255, 0, 0, 0.34);
+    position: absolute;
+    left:536px;
     height: 50px;
     min-width: 50px;
-    margin-top: -17px;
+    top: 157px;
 }
 #positionR4{
-    /*background-color: rgba(255, 0, 0, 0.34);*/
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.34);
+    left: 600px;
     height: 50px;
     min-width: 50px;
-    margin-top: -17px;
+    top: 157px;
 }
 .move{
     margin-left: -24px;
@@ -205,8 +218,10 @@ html {
 #def_pos{
     margin: 100px;
     height: 50px;
+    width: 600px;
     min-width: 50px;
-
+    position: absolute;
+    left: -70px;
     border-color: darkslateblue;
     border-radius: 5px;
     background-color: #a2a2a2;
@@ -251,11 +266,11 @@ html {
 
 #secret{
     position: absolute;
-    left: 65px;
+    left: -10px;
     top: 330px;
     pointer-events: none;
-    height: 250px;
-    width: 500px;
+    height: 500px;
+    width: 800px;
 }
 /*#wheel{
     background-image: url(https://raw.githubusercontent.com/AYNesterov/data_sets/master/внутри%20пни.png);
@@ -267,7 +282,7 @@ html {
 /*!!!!*/
 .slidecontainer {
     position: absolute;
-    top: 90%;
+    top: 700px;
     left: -0.3%;
     width: 100%; /* Width of the outside container */
 }
@@ -365,12 +380,14 @@ html {
     top: 110px;
     border-radius: 10px;
 }
-#weight1{
-    cursor: grab;
-    /*-webkit-user-drag: element;*/
-}
 #weight2{
     cursor: grab;
+    position: absolute;
+    /*-webkit-user-drag: element;*/
+}
+#weight1{
+    position: absolute;
+    left:250px;
     /*-webkit-user-drag: element;*/
 }
 

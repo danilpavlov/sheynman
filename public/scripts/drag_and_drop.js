@@ -1,5 +1,4 @@
 var weight_touch;
-var b=0;
 const default_position = document.getElementById("def_pos"); // selectors - class of position
 const weight_1 = document.getElementById("weight1");
 const weight_2 = document.getElementById("weight2");
@@ -17,209 +16,234 @@ const position_3_L = document.getElementById("positionL3");
 
 const position_4_R =document.getElementById("positionR4");
 const position_4_L =document.getElementById("positionL4");
-
-
-var spring_weight_count = 0;
-
-default_position.ondragover = allowDrop;
-position_0.ondragover=allowDrop;
-position_st.ondragover = allowDrop;
-position_1_R.ondragover = allowDrop;
-position_1_L.ondragover=allowDrop;
-position_2_R.ondragover=allowDrop;
-position_2_L.ondragover=allowDrop;
-position_3_R.ondragover=allowDrop;
-position_3_L.ondragover=allowDrop;
-position_4_R.ondragover=allowDrop;
-position_4_L.ondragover=allowDrop;
-function allowDrop(event){
-    event.preventDefault();
-    console.log("start");
-}
-default_position.addEventListener("pointerup",allowDrop);
-position_0.addEventListener("pointerup",allowDrop);
-position_st.addEventListener("pointerup",allowDrop);
-position_1_R.addEventListener("pointerup",allowDrop);
-position_1_L.addEventListener("pointerup",allowDrop);
-position_2_R.addEventListener("pointerup",allowDrop)
-position_2_L.addEventListener("pointerup",allowDrop);
-position_3_R.addEventListener("pointerup",allowDrop);
-position_3_L.addEventListener("pointerup",allowDrop);
-position_4_R.addEventListener("pointerup",allowDrop);
-position_4_L.addEventListener("pointerup",allowDrop);
-
-weight_1.ondragstart = drag;
-weight_2.ondragstart = drag;
-weight_1.addEventListener("pointermove", drag1);
-weight_2.addEventListener("pointermove", drag2);
-
-function drag(event){
-    event.dataTransfer.setData('id', event.target.id);
-}
+weight_1.addEventListener("pointerdown", drag1);
+weight_2.addEventListener("pointerdown", drag2);
+var itog;
+var b=0;
 function drag1(event){
     if (b===0)
-    {   console.log("gj")
-        weight_touch='weight1'
-    b=1;}
+    {event.preventDefault();
+        console.log("start")
+    itog=weight_1;
+    }
 }
 function drag2(event){
     if (b===0)
-    {   console.log("rf")
-        weight_touch='weight2'
-    b=1;}
+    {itog=weight_2;
+        console.log("start")
+    event.preventDefault();
+    }
 }
-default_position.ondrop = drop;
-position_0.ondrop=drop;
-position_st.ondrop = drop;
-position_1_R.ondrop=drop;
-position_1_L.ondrop=drop;
-position_2_R.ondrop=drop;
-position_2_L.ondrop=drop;
-position_3_R.ondrop=drop;
-position_3_L.ondrop=drop;
-position_4_R.ondrop=drop;
-position_4_L.ondrop=drop;
-// default_position.addEventListener("touchend",(e)=>{e.preventDefault();pos_touch=default_position;console.log("jopgjgjp")});
-// position_0.addEventListener("touchend",(e)=>{e.preventDefault();pos_touch=position_0;console.log("0")});
-// position_st.addEventListener("touchmove",(e)=>{pos_touch=position_st});
-// position_1_R.addEventListener("touchmove",(e)=>{pos_touch=position_1_R});
-// position_1_L.addEventListener("touchmove",(e)=>{pos_touch=position_1_L});
-// position_2_R.addEventListener("touchmove",(e)=>{pos_touch=position_2_R});
-// position_2_L.addEventListener("touchmove",(e)=>{pos_touch=position_2_L});
-// position_3_R.addEventListener("touchmove",(e)=>{pos_touch=position_3_R});
-// position_3_L.addEventListener("touchmove",(e)=>{pos_touch=position_3_L});
-// position_4_R.addEventListener("touchmove",(e)=>{pos_touch=position_4_R});
-// position_4_L.addEventListener("touchmove",(e)=>{pos_touch=position_4_L});
-default_position.addEventListener("pointerdown",drop_touch);
-position_0.addEventListener("pointerdown",drop_touch);
-position_st.addEventListener("pointerdown",drop_touch);
-position_1_R.addEventListener("pointerdown",drop_touch);
-position_1_L.addEventListener("pointerdown",drop_touch);
-position_2_R.addEventListener("pointerdown",drop_touch);
-position_2_L.addEventListener("pointerdown",drop_touch);
-position_3_R.addEventListener("pointerdown",drop_touch);
-position_3_L.addEventListener("pointerdown",drop_touch);
-position_4_R.addEventListener("pointerdown",drop_touch);
-position_4_L.addEventListener("pointerdown",drop_touch);
+let body=document.querySelector(".body")
+// document.addEventListener("mousemove",(e)=>{
+//     if (b===1)
+//     {   var e1=e;
+//         //body.style.cursor="none";
+//    pos1 = pos3 - e1.clientX;
+//     pos2 = pos4 - e1.clientY;
+//         pos3 = e1.clientX;
+//         pos4 = e1.clientY;
+//     // set the element's new position:
+//     console.log(weight_1.offsetLeft,weight_1.offsetTop,"offset")
+//      console.log(e1.clientX,e1.clientY,"xy")
+//         console.log(e1.clientX,"client")
+//
+//     weight_1.style.top = Math.round((weight_1.offsetTop - pos2)) + "px";
+//     weight_1.style.left = Math.round((weight_1.offsetLeft - pos1)) + "px";}
+//     })
+document.addEventListener("click",(e)=>{
+    console.log(e.clientX,e.clientY,"x y")//434 654 913 689
+})
+document.addEventListener("pointerup",(e)=>{
+        if (b===1)
+        {body.style.cursor = "grab";
+        let l=e.clientX+105;
+        console.log(l,e.clientY,'l')
+        let item="Oops"
+        if (e.clientX>=434 && e.clientY>=654 && e.clientX<=913 && e.clientY<=689)
+            item=default_position;
+        else
+            if (e.clientY>395 && e.clientY<445)
+        {
+            if (l>535 && l<580)
+                item=position_4_L;
+            else
+            if (l>585 && l<620)
+                item=position_3_L;
+            else
+            if (l>630 && l<670)
+                item=position_2_L;
+            else
+            if (l>685 && l<720)
+                item=position_1_L;
+            else
+            if (l>755 && l<795)
+                item=position_0;
+            else
+            if (l>828 && l<861)
+                item=position_1_R;
+            else
+            if (l>875 && l<915)
+                item=position_2_R;
+            else
+            if (l>975 && l<1020)
+                item=position_4_R;
+            else
+            if (l>920 && l<960)
+                item=position_3_R;
 
-function drop(event){
-    let test1=document.getElementById('weight1');
-    let test2=document.getElementById('weight2');
-    console.log(event)
-    //console.log(test1)
-    let itemId = event.dataTransfer.getData('id');
-    let b1=0;
-    if ((test1.childElementCount === 0) &&   (test2.childElementCount === 0))
-        b1=1;
-    //console.log((event.target.id.slice(-1)));
-    // if (event.target === test1 && event.target === test2){
-    //
-    // }else{
-    //     pos = event.target;}
-
-    let springpenis = document.getElementById("springwropeid");
-    if (test1.firstChild===test2) {
-        event.target.appendChild(document.getElementById("weight2"));
-        springpenis.style.height = String(110 + "px");
-    }
-    else if (test2.firstChild===test1){
-        event.target.appendChild(document.getElementById("weight1"));
-        springpenis.style.height = String(110 + "px");
-
-    }
-    else{
-        // ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)) ||  ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)){
+        }
+        else
+        if (l>1200 && l<1230)
+            item=position_st;
+        console.log(itog,"item")
+        if (item!=='Oops')
+        {  if (item===default_position)
+            {if (itog===weight_1)
+                    itog.style.left="250px";
+                else
+                    itog.style.left="300px";
+            itog.style.top="4px";}
+            else
+        {itog.style.top='0px';
+            itog.style.left='0px';}
+            let test1=document.getElementById('weight1');
+            let test2=document.getElementById('weight2');
+            let b1=0;
+            if ((test1.childElementCount === 0) &&   (test2.childElementCount === 0))
+                b1=1;
+            let springpenis = document.getElementById("springwropeid");
+                // ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)) ||  ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)){
 
 
-        event.target.append(document.getElementById(itemId));
-    }
-    if (position_st.childElementCount === 1 && !((test1.firstChild===test2 || test2.firstChild===test1))) {
+                item.appendChild(itog);
+            if (position_st.childElementCount!==0) {
 
-        if (((position_st.id === test1.parentNode.id) || (position_st.id === test2.parentNode.id)) && (test1.childElementCount === 0) && (test2.childElementCount === 0) && b1 === 1) {
-            console.log(position_st.childElementCount);
-            for (let i = 0; i < 305; i += 0.005) {
-                setTimeout(() => {
-                    springpenis.style.height = String(110 + i + "px");
-                }, 200)
-                //position_st.style.top = String(445 + i + "px");
-                //console.log(springpenis.style.height);
+                if (position_st.childElementCount===1) {
+                    for (let i = 0; i < 305; i += 0.005) {
+                        setTimeout(() => {
+                            springpenis.style.height = String(110 + i + "px");
+                        }, 200)
+                        //position_st.style.top = String(445 + i + "px");
+                        //console.log(springpenis.style.height);
+                    }
+                }
+            if (position_st.childElementCount === 2){
+                for (let i = 0; i < 285; i += 0.005) {
+                    setTimeout(() => {
+                        springpenis.style.height = String(110+305 + i + "px");
+                    }, 200)
+
+                }}
             }
+           if  (position_st.childElementCount===2)
+                springpenis.style.height = String(395 + "px");
+            if (position_st.childElementCount === 1) {
+                springpenis.style.height = String(110+ "px");
+            }
+            if (position_st.childElementCount===0)
+                springpenis.style.height = String(110+ "px");
         }
-    }else if (position_st.childElementCount === 1 && (test1.firstChild===test2 || test2.firstChild===test1)){
-        console.log(position_st.childElementCount);
-        for (let i = 0; i < 285; i += 0.005) {
-            setTimeout(() => {
-                springpenis.style.height = String(110+305 + i + "px");
-            }, 200)
+        b=0;
+            }
+        else
+            b=1;}
+)
+// default_position.addEventListener("pointerdown",drop_touch);
+// position_0.addEventListener("pointerdown",drop_touch);
+// position_st.addEventListener("pointerdown",drop_touch);
+// position_1_R.addEventListener("pointerdown",drop_touch);
+// position_1_L.addEventListener("pointerdown",drop_touch);
+// position_2_R.addEventListener("pointerdown",drop_touch);
+// position_2_L.addEventListener("pointerdown",drop_touch);
+// position_3_R.addEventListener("pointerdown",drop_touch);
+// position_3_L.addEventListener("pointerdown",drop_touch);
+// position_4_R.addEventListener("pointerdown",drop_touch);
+// position_4_L.addEventListener("pointerdown",drop_touch);
 
-        }
-    }
-    if (b1 === 0 && (test1.childElementCount === 0) && (test2.childElementCount === 0))
-        springpenis.style.height = String(395 + "px");
-    if (position_st.childElementCount === 0) {
-        springpenis.style.height = String(110 + "px");
-    }
+// weight_1.addEventListener("touchstart", drag1);
+// weight_2.addEventListener("touchstart", drag2);
 
-    //console.log(test1.firstChild);
-}
+// document.addEventListener("touchmove",(e)=>{
+//     console.log("rojoirg");
+//     if (b===1)
+//     {   var e1=e;
+//         body.style.cursor="none";
+//         // pos1 = pos3 - e1.targetTouches[0].clientX;
+//         // pos2 = pos4 - e1.targetTouches[0].clientY;
+//         pos3 =e1.targetTouches[0].clientX;
+//         pos4 = e1.targetTouches[0].clientY;
+//         console.log(pos2)
+//         // set the element's new position:
+//         weight_1.style.top = (pos4-100) + "px";
+//         weight_1.style.left = (pos3-400) + "px";}})
+// document.addEventListener("touchend",(e)=>{
+//     if (b===1) {
+//         b = 0;
+//         body.style.cursor = "grab";
+//         position_4_L.style.backgroundColor = "red"
+//     }
+// })
+
 function drop_touch(event){
     if (b===1)
     {let test1=document.getElementById('weight1');
-    let test2=document.getElementById('weight2');
-    console.log("abe")
-    let itemId = weight_touch;
-    console.log(itemId)
-    let b1=0;
-    if ((test1.childElementCount === 0) &&   (test2.childElementCount === 0))
-        b1=1;
-    //console.log((event.target.id.slice(-1)));
-    // if (event.target === test1 && event.target === test2){
-    //
-    // }else{
-    //     pos = event.target;}
+        let test2=document.getElementById('weight2');
+        console.log("abe")
+        let itemId = weight_touch;
+        console.log(itemId)
+        let b1=0;
+        if ((test1.childElementCount === 0) &&   (test2.childElementCount === 0))
+            b1=1;
+        //console.log((event.target.id.slice(-1)));
+        // if (event.target === test1 && event.target === test2){
+        //
+        // }else{
+        //     pos = event.target;}
 
-    let springpenis = document.getElementById("springwropeid");
-    if (test1.firstChild===test2) {
-        event.target.appendChild(document.getElementById("weight2"));
-        springpenis.style.height = String(110+ "px");
-    }
-    else if (test2.firstChild===test1){
-       event.target.appendChild(document.getElementById("weight1"));
-        springpenis.style.height = String(110+ "px");
+        let springpenis = document.getElementById("springwropeid");
+        if (test1.firstChild===test2) {
+            event.target.appendChild(document.getElementById("weight2"));
+            springpenis.style.height = String(110+ "px");
+        }
+        else if (test2.firstChild===test1){
+            event.target.appendChild(document.getElementById("weight1"));
+            springpenis.style.height = String(110+ "px");
 
-    }
-    else{
-        // ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)) ||  ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)){
+        }
+        else{
+            // ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)) ||  ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)){
 
 
-        event.target.append(document.getElementById(itemId));
-    }
-    if (position_st.childElementCount === 1 && !((test1.firstChild===test2 || test2.firstChild===test1))) {
+            event.target.append(document.getElementById(itemId));
+        }
+        console.log(position_st.childElementCount,"child")
+        if (position_st.childElementCount !== 0) {
 
-        if (((position_st.id === test1.parentNode.id) || (position_st.id === test2.parentNode.id)) && (test1.childElementCount === 0) && (test2.childElementCount === 0) && b1 === 1) {
-            console.log(position_st.childElementCount);
-            for (let i = 0; i < 305; i += 0.005) {
-                setTimeout(() => {
-                    springpenis.style.height = String(110 + i + "px");
-                }, 200)
-                //position_st.style.top = String(445 + i + "px");
-                //console.log(springpenis.style.height);
+            if (position_st.childElementCount===1) {
+                console.log(position_st.childElementCount);
+                for (let i = 0; i < 305; i += 0.005) {
+                    setTimeout(() => {
+                        springpenis.style.height = String(110 + i + "px");
+                    }, 200)
+                    //position_st.style.top = String(445 + i + "px");
+                    //console.log(springpenis.style.height);
+                }
             }
-        }
-    }else if (position_st.childElementCount === 1 && (test1.firstChild===test2 || test2.firstChild===test1)){
-        console.log(position_st.childElementCount);
-        for (let i = 0; i < 285; i += 0.005) {
-            setTimeout(() => {
-                springpenis.style.height = String(110+305 + i + "px");
-            }, 200)
+        else if (position_st.childElementCount === 2 ){
+            console.log(position_st.childElementCount);
+            for (let i = 0; i < 285; i += 0.005) {
+                setTimeout(() => {
+                    springpenis.style.height = String(110+305 + i + "px");
+                }, 200)
 
-        }
-    }
-    if (b1 === 0 && (test1.childElementCount === 0) && (test2.childElementCount === 0))
-        springpenis.style.height = String(395 + "px");
-    if (position_st.childElementCount === 0) {
-        springpenis.style.height = String(110+ "px");
-    }}
+            }
+        }}
+        if (b1 === 0 && (test1.childElementCount === 0) && (test2.childElementCount === 0))
+            springpenis.style.height = String(395 + "px");
+        if (position_st.childElementCount === 0) {
+            springpenis.style.height = String(110+ "px");
+        }}
     b=0;
 
     //console.log(test1.firstChild);
