@@ -252,11 +252,16 @@ function drop_touch(event){
     //console.log(test1.firstChild);
 }
 
+
 function reset_all_weights(){
     first_one = document.getElementById("weight1");
     second_one = document.getElementById("weight2");
     first_one.style.left="250px";
     second_one.style.left="300px";
+    // second_one.style.top="4px";
+
+    let spring = document.getElementById("springwropeid");
+    spring.style.height = String(110 + "px");
     // second_one.style.top="4px";
 
 
