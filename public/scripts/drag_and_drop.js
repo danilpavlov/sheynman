@@ -24,14 +24,16 @@ function drag1(event){
     if (b===0)
     {event.preventDefault();
         console.log("start")
-    itog=weight_1;
+        itog=weight_1;
+        body.style.cursor = "grab";
     }
 }
 function drag2(event){
     if (b===0)
     {itog=weight_2;
         console.log("start")
-    event.preventDefault();
+        event.preventDefault();
+        body.style.cursor = "grab";
     }
 }
 let body=document.querySelector(".body")
@@ -55,15 +57,15 @@ document.addEventListener("click",(e)=>{
     console.log(e.clientX,e.clientY,"x y")//434 654 913 689
 })
 document.addEventListener("pointerup",(e)=>{
-        if (b===1)
-        {body.style.cursor = "grab";
+    if (b===1)
+    {body.style.cursor = "default";
         let l=e.clientX+105;
         console.log(l,e.clientY,'l')
         let item="Oops"
         if (e.clientX>=434 && e.clientY>=654 && e.clientX<=913 && e.clientY<=689)
             item=default_position;
         else
-            if (e.clientY>395 && e.clientY<445)
+        if (e.clientY>395 && e.clientY<445)
         {
             if (l>535 && l<580)
                 item=position_4_L;
@@ -99,12 +101,12 @@ document.addEventListener("pointerup",(e)=>{
         console.log(itog,"item")
         if (item!=='Oops')
         {  if (item===default_position)
-            {if (itog===weight_1)
-                    itog.style.left="250px";
-                else
-                    itog.style.left="300px";
+        {if (itog===weight_1)
+            itog.style.left="250px";
+        else
+            itog.style.left="300px";
             itog.style.top="4px";}
-            else
+        else
         {itog.style.top='0px';
             itog.style.left='0px';}
             let test1=document.getElementById('weight1');
@@ -113,10 +115,10 @@ document.addEventListener("pointerup",(e)=>{
             if ((test1.childElementCount === 0) &&   (test2.childElementCount === 0))
                 b1=1;
             let springpenis = document.getElementById("springwropeid");
-                // ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)) ||  ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)){
+            // ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)) ||  ((test1.parentNode.id === position_st.id) && (test2.parentNode.id !== position_st.id)){
 
 
-                item.appendChild(itog);
+            item.appendChild(itog);
             if (position_st.childElementCount!==0) {
 
                 if (position_st.childElementCount===1) {
@@ -128,15 +130,15 @@ document.addEventListener("pointerup",(e)=>{
                         //console.log(springpenis.style.height);
                     }
                 }
-            if (position_st.childElementCount === 2){
-                for (let i = 0; i < 285; i += 0.005) {
-                    setTimeout(() => {
-                        springpenis.style.height = String(110+305 + i + "px");
-                    }, 200)
+                if (position_st.childElementCount === 2){
+                    for (let i = 0; i < 285; i += 0.005) {
+                        setTimeout(() => {
+                            springpenis.style.height = String(110+305 + i + "px");
+                        }, 200)
 
-                }}
+                    }}
             }
-           if  (position_st.childElementCount===2)
+            if  (position_st.childElementCount===2)
                 springpenis.style.height = String(395 + "px");
             if (position_st.childElementCount === 1) {
                 springpenis.style.height = String(110+ "px");
@@ -145,10 +147,11 @@ document.addEventListener("pointerup",(e)=>{
                 springpenis.style.height = String(110+ "px");
         }
         b=0;
-            }
-        else
-            b=1;}
-)
+    }
+    else
+        b=1;
+    // body.style.cursor = "default";
+})
 // default_position.addEventListener("pointerdown",drop_touch);
 // position_0.addEventListener("pointerdown",drop_touch);
 // position_st.addEventListener("pointerdown",drop_touch);
@@ -230,21 +233,35 @@ function drop_touch(event){
                     //console.log(springpenis.style.height);
                 }
             }
-        else if (position_st.childElementCount === 2 ){
-            console.log(position_st.childElementCount);
-            for (let i = 0; i < 285; i += 0.005) {
-                setTimeout(() => {
-                    springpenis.style.height = String(110+305 + i + "px");
-                }, 200)
+            else if (position_st.childElementCount === 2 ){
+                console.log(position_st.childElementCount);
+                for (let i = 0; i < 285; i += 0.005) {
+                    setTimeout(() => {
+                        springpenis.style.height = String(110+305 + i + "px");
+                    }, 200)
 
-            }
-        }}
+                }
+            }}
         if (b1 === 0 && (test1.childElementCount === 0) && (test2.childElementCount === 0))
             springpenis.style.height = String(395 + "px");
         if (position_st.childElementCount === 0) {
             springpenis.style.height = String(110+ "px");
         }}
     b=0;
-
+    // body.style.cursor = "default";
     //console.log(test1.firstChild);
 }
+
+function reset_all_weights(){
+    first_one = document.getElementById("weight1");
+    second_one = document.getElementById("weight2");
+    first_one.style.left="250px";
+    second_one.style.left="300px";
+    // second_one.style.top="4px";
+
+
+    default_position.appendChild(first_one);
+    default_position.appendChild(second_one);
+}
+
+
