@@ -103,13 +103,21 @@ document.addEventListener("pointerup",(e)=>{
         if (item!=='Oops')
         {  if (item===default_position)
         {if (itog===weight_1)
-            itog.style.left="250px";
+        {   itog.style.top="0px";
+            itog.style.left="250px";}
         else
-            itog.style.left="300px";
-            itog.style.top="4px";}
-        else
-        {itog.style.top='0px';
-            itog.style.left='0px';}
+            {itog.style.left="300px";
+            itog.style.top="0px";}}
+            else
+        {   console.log(item,"firstChild")
+            if (item.childElementCount===0)
+            {itog.style.top='0px';
+                itog.style.left='0px';}
+            else{
+                itog.style.top="-10px"
+                itog.style.left="0px"
+            }
+        }
             let test1=document.getElementById('weight1');
             let test2=document.getElementById('weight2');
             let b1=0;
